@@ -3,7 +3,7 @@
 ### **MVP - Sistema de Biblioteca para Igreja**
 ---
 #### Links:
-- [Board do Planejamento](https://github.com/users/rochajario/projects/4)
+- [Board do Planejamento]([https://github.com/users/rochajario/projects/4](https://github.com/users/rochajario/projects/4/views/1?layout=board))
 
 ### **Histórias de Usuário - Membro da Comunidade**
 **Ator:** Membro da Comunidade
