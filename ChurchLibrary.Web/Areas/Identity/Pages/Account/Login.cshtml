@@ -1,0 +1,57 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<div class="column d-flex flex-column justify-content-center align-items-center">
+
+    <div class="card w-50 text-center">
+        <div class="card-header h2">
+            Login
+        </div>
+        <div class="card-body">
+            <form id="account" method="post">
+                <hr />
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="seu@email.com" />
+                    <label asp-for="Input.Email" class="form-label">Email</label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="Sua senha" />
+                    <label asp-for="Input.Password" class="form-label">Senha</label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="checkbox mb-3">
+                    <label asp-for="Input.RememberMe" class="form-label">
+                        <input class="form-check-input" asp-for="Input.RememberMe" />
+                        Lembrar-me
+                    </label>
+                </div>
+                <div>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Login</button>
+                </div>
+
+            </form>
+        </div>
+        <div class="card-footer text-muted">
+            <span class="d-flex flex-row flex-nowrap justify-content-around align-items-center">
+                <span>
+                    <a id="forgot-password" asp-page="./ForgotPassword">Esqueceu sua senha?</a>
+                </span>
+                <span>
+                    <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Reenviar e-mail de confirmação</a>
+                </span>
+                <span>
+                    <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Novo Cadastro</a>
+                </span>
+            </span>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

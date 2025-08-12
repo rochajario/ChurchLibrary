@@ -1,0 +1,73 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="column d-flex flex-column justify-content-center align-items-center">
+
+    <div class="card w-50 text-center">
+        <div class="card-header h2">
+            Novo Cadastro
+        </div>
+        <div class="card-body">
+            <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Address" class="form-control" autocomplete="username" aria-required="true" placeholder="Seu endereço" />
+                    <label asp-for="Input.Address">Endereço</label>
+                    <span asp-validation-for="Input.Address" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.AddressComplement" class="form-control" autocomplete="username" aria-required="true" placeholder="Complemento do endereço" />
+                    <label asp-for="Input.AddressComplement">Complemento Endereço</label>
+                    <span asp-validation-for="Input.AddressComplement" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.City" class="form-control" autocomplete="username" aria-required="true" placeholder="Cidade" />
+                    <label asp-for="Input.City">Cidade</label>
+                    <span asp-validation-for="Input.City" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.State" class="form-control" autocomplete="username" aria-required="true" placeholder="Estado" />
+                    <label asp-for="Input.State">Estado</label>
+                    <span asp-validation-for="Input.State" class="text-danger"></span>
+                </div>
+                <hr />
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="seu@email.com" />
+                    <label asp-for="Input.Email">Email</label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Sua senha" />
+                    <label asp-for="Input.Password">Senha</label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Confirmação da sua senha" />
+                    <label asp-for="Input.ConfirmPassword">Confirme sua senha</label>
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                </div>
+                <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Registrar-se</button>
+            </form>
+        </div>
+        <div class="card-footer text-muted">
+            <span class="d-flex flex-row flex-nowrap justify-content-around align-items-center">
+                <span>
+                    <a id="forgot-password" asp-page="./ForgotPassword">Esqueceu sua senha?</a>
+                </span>
+                <span>
+                    <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Reenviar e-mail de confirmação</a>
+                </span>
+                <span>
+                    <a asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl">Realizar Login</a>
+                </span>
+            </span>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Biblioteca</title>
+    <script type="importmap"></script>
+
+    <link href="~/lib/aos/aos.css" rel="stylesheet">
+    <link href="~/lib/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ChurchLibrary.Web.styles.css" asp-append-version="true" />
+</head>
+<body class="index-page">
+    <nav class="navbar">
+        <div class="container justify-content-between">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"> Biblioteca </a>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a class="nav-link px-2 link-secondary" asp-area="" asp-page="/Index">Home</a></li>
+                    <li><a class="nav-link px-2 link-body-emphasis" asp-area="" asp-page="/Privacy">Privacy</a></li>
+                </ul>
+            </div>
+            <partial name="_LoginPartial" />
+        </div>
+    </nav>
+
+    <main class="main">
+        <section id="starter-section" class="starter-section section">
+            <div class="container">
+                @RenderBody()
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="container">
+                <div class="copyright">
+                    <span>Copyright</span> <strong class="px-1 sitename">Biblioteca - IBRBH</strong> <span>Todos os Direitos Reservados</span>
+                </div>
+                <div class="credits">
+                    Desenvolvido por <a href="https://linkedin.com/in/rochajario">Bright Digital</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- Main JS File -->
+    <script src="~/js/site.js"></script>
+    <script src="~/lib/aos/aos.js"></script>
+    <script src="~/lib/swiper/swiper-bundle.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+</body>
+
+</html>

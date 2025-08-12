@@ -1,0 +1,41 @@
+﻿@page
+@model ResendEmailConfirmationModel
+@{
+    ViewData["Title"] = "Reenviar E-mail de Confirmação";
+}
+
+<div class="column d-flex flex-column justify-content-center align-items-center">
+
+    <div class="card w-50 text-center">
+        <div class="card-header h2">
+            Reenviar E-mail de Confirmação
+        </div>
+        <div class="card-body">
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger" role="alert"></div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Email" class="form-control" aria-required="true" placeholder="seu@email.com" />
+                    <label asp-for="Input.Email" class="form-label"></label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <button type="submit" class="w-100 btn btn-lg btn-primary">Reenviar</button>
+            </form>
+        </div>
+        <div class="card-footer text-muted">
+            <span class="d-flex flex-row flex-nowrap justify-content-around align-items-center">
+                <span>
+                    <a id="forgot-password" asp-page="./ForgotPassword">Esqueceu sua senha?</a>
+                </span>
+                <span>
+                    <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Reenviar e-mail de confirmação</a>
+                </span>
+                <span>
+                    <a asp-page="./Login" asp-page="./Login">Realizar Login</a>
+                </span>
+            </span>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

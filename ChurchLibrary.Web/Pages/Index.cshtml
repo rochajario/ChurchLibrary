@@ -1,0 +1,177 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-5">
+                    <div class="book-hero-content" data-aos="fade-up" data-aos-delay="200">
+                        <span class="book-genre">Teologia</span>
+                        <h1>O conhecimento que transforma vidas</h1>
+                        <p class="book-subtitle">Uma coleção de obras para nutrir a mente e o coração de quem busca a verdade bíblica.</p>
+                        <div class="author">
+                            <h3>Igreja Batista Reformada em Belo Horizonte</h3>
+                        </div>
+                        <p class="book-description">
+                            Explore, cresça, sirva. Acesse o nosso acervo agora e aprofunde-se na fé reformada.
+                        </p>
+                        <div class="hero-cta">
+                            <a href="#purchase" class="btn-primary">Conheça o Acervo</a>
+                            <a href="#excerpt" class="btn-outline">Inscreva-se</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-flex justify-content-center justify-content-lg-end" data-aos="zoom-out" data-aos-delay="300">
+                    <div class="book-cover">
+                        <img src="~/img/book/book-1.webp" alt="Book Cover" class="img-fluid">
+                        <div class="book-shadow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- /Hero Section -->
+    <!-- About Section -->
+    <section id="about" class="about section light-background">
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row align-items-center gy-5 gx-lg-5">
+                <div class="col-lg-6">
+                    <div class="about-book-img" data-aos="fade-right" data-aos-delay="200">
+                        <img src="~/img/book/book-square-5.webp" alt="Book Title" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="about-book-content" data-aos="fade-left" data-aos-delay="300">
+                        <h2>A biblioteca</h2>
+                        <div class="book-category">
+                            <span><i class="bi bi-bookmark"></i> Conhecimento</span>
+                            <span><i class="bi bi-people"></i> Comunidade</span>
+                        </div>
+                        <p>
+                            Uma biblioteca pode ser mais do que um acervo de livros; ela é um ponto de encontro com a história, com a teologia e com a verdade que sustenta nossa fé. Nosso espaço digital foi cuidadosamente criado para ser uma fonte de conhecimento, oferecendo obras de autores reformados, estudos aprofundados sobre as Escrituras e reflexões que desafiam a mente e fortalecem o espírito. Cada livro, artigo e recurso disponível aqui tem um propósito singular: servir a você em sua jornada de crescimento espiritual e de aprofundamento na Palavra de Deus.
+                        </p>
+                        <p>
+                            Convidamos você a explorar esse tesouro de sabedoria. Seja para um estudo pessoal, para enriquecer o sermão ou para encontrar respostas às grandes perguntas da fé, nossa biblioteca está à sua disposição. Mergulhe em obras que transformaram gerações e redescubra a riqueza da teologia reformada. Aqui, o conhecimento não é apenas acumulado, mas vivido, e a busca pela verdade se torna uma forma de adoração.
+                        </p>
+
+                        <div class="highlights">
+                            <ul>
+                                <li>
+                                    <i class="bi bi-check-circle"></i>
+                                    <span>Aprofunde-se na Palavra</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle"></i>
+                                    <span>Conhecimento Reformado</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle"></i>
+                                    <span>Recursos para a Vida</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle"></i>
+                                    <span>Jornada de Crescimento</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- /About Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row">
+                <div class="col-lg-5" data-aos="fade-right" data-aos-delay="300">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <h3>Contato</h3>
+                            <p>Retiradas e Devoluções ao acervo devem ser realizadas mediante pré agendamento</p>
+                            <p>Cultos aos Domingos às 10:00h</p>
+
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <i class="bi bi-envelope"></i>
+                                    <div>
+                                        <h4>Email:</h4>
+                                        <p>contato@ibrbh.com.br</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-item">
+                                    <i class="bi bi-telephone"></i>
+                                    <div>
+                                        <h4>Phone:</h4>
+                                        <p>+55 (31) 9XXX-XXXXX</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-item">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <div>
+                                        <h4>Endereço:</h4>
+                                        <p>Rua das Canárias, 50</p>
+                                        <p>Santa Branca, Belo Horizonte</p>
+                                        <p>Minas Gerais, Brasil</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="social-links">
+                                <a href="#"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7" data-aos="fade-left" data-aos-delay="400">
+                    <div class="contact-form-wrapper">
+                        <form action="forms/contact.php" method="post" class="php-email-form">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="John Doe" required="">
+                                </div>
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <label for="email">Your Email</label>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="john@example.com" required="">
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="subject">Subject</label>
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="I loved your book!" required="">
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" name="message" rows="7" placeholder="Your message here..." required=""></textarea>
+                            </div>
+
+                            <div class="my-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- /Contact Section -->
+</main>
